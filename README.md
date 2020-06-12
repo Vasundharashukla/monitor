@@ -3,7 +3,7 @@
 This application is the main application that leverages the [health reporter api](https://github.com/vasundharashukla/health-reporter) to get metadata
 and metric details about an AWS EC2 instance.
 
-site-url: [http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com]("http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com")
+**site-url**: [http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com](http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com)
 
 ## Technology Used
 - **Programming Languages**
