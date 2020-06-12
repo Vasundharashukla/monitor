@@ -4,12 +4,12 @@ from pprint import pprint
 url = "http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com"
 
 def create():
-    resp = requests.post(f"{url}/create-user", json={"username": "vasu", "password": "vasu", "email": "17ucc065@lnmiit.ac.in"})
+    resp = requests.post(f"{url}/create-user", json={"username": "vasu", "password": "vasu", "email": "<email-id>"})
     print(resp.json())
 
 def add():
     resp = requests.post(f"{url}/add-instances", json={"username": "vasu", "password": "vasu",
-                                                                      "InstanceId":'i-05bdf36c7e6fb9961'})
+                                                                      "InstanceId":'<instance-id>'})
     print(resp.json())
 
 def get():
@@ -17,7 +17,7 @@ def get():
     print(resp.json())
 
 def halt():
-    resp = requests.post(f"{url}/halt", json={"username": "vasu", "password": "vasu", "InstanceId": ['i-08afd5a0960ad677f']})
+    resp = requests.post(f"{url}/halt", json={"username": "vasu", "password": "vasu", "InstanceId": ['<instance-id>']})
     print(resp.json())
 
 def metrics():
