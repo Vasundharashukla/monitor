@@ -12,6 +12,9 @@ and metric details about an AWS EC2 instance.
 - **Frameworks**
 	- Flask 1.1.1
 
+- **Databases**
+	- AWS RDS
+
 ## Database Schema
 
 - **user table**: fields(username(varchar primary_key), password(varchar), email(varchar))
