@@ -3,8 +3,8 @@ from flask import request, jsonify
 from .models import User, Instance, Params, Data
 from pprint import pprint
 from flask_mail import Message
-import requests
-
+import requests, warnings
+warnings.filterwarnings('ignore')
 
 ## MONITORING FEATURES
 @app.route('/create-user', methods=["POST"])
