@@ -1,7 +1,8 @@
 # Monitoring Application
 
-This application is the main application that leverages the [health reporter api](https://github.com/vasundharashukla/health-reporter) to get metadata
-and metric details about an AWS EC2 instance.
+This application is the main application that leverages the [health reporter api](https://github.com/vasundharashukla/health-reporter) to get metadata and metric details about an AWS EC2 instance. The application has been hosted on AWS using the Elastic BeanStalk service.
+
+**App Link** - [http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com](http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com)
 
 ## Technology Used
 - **Programming Languages**
@@ -9,6 +10,9 @@ and metric details about an AWS EC2 instance.
 	
 - **Frameworks**
 	- Flask 1.1.1
+
+- **Databases**
+	- AWS RDS
 
 ## Database Schema
 
