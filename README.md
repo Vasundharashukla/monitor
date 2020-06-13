@@ -3,17 +3,12 @@
 This application is the main application that leverages the [health reporter api](https://github.com/vasundharashukla/health-reporter) to get metadata
 and metric details about an AWS EC2 instance.
 
-**site-url**: [http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com](http://monitoring-env.eba-kmh3ybxg.ap-south-1.elasticbeanstalk.com)
-
 ## Technology Used
 - **Programming Languages**
 	- Python
 	
 - **Frameworks**
 	- Flask 1.1.1
-
-- **Databases**
-	- AWS RDS
 
 ## Database Schema
 
@@ -25,7 +20,7 @@ and metric details about an AWS EC2 instance.
 
 ## API Endpoints
 
-- /create-user - Route to create a new user. Accepts a POST request with json data in the given format:
+- ```/create-user``` - Route to create a new user. Accepts a POST request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
@@ -33,7 +28,7 @@ and metric details about an AWS EC2 instance.
     "email": '<your-email>'
 }
 ```
-- /add-instance - Route to add a new instance to database for a user. Accepts a POST request with json data in the given format:
+- ```/add-instance``` - Route to add a new instance to database for a user. Accepts a POST request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
@@ -42,7 +37,7 @@ and metric details about an AWS EC2 instance.
 }
 ```
 
-- /get-instances - send a GET request to get instance assigned to the given user. 
+- ```/get-instances``` - send a GET request to get instance assigned to the given user. 
 ```javascript
 {
     "username": '<your-username>',
@@ -50,16 +45,16 @@ and metric details about an AWS EC2 instance.
 }
 ```
 
-- /halt - Route to remove instance for a given user. Accepts a post request with json data in the given format:
+- ```/halt``` - Route to remove instance for a given user. Accepts a post request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
     "password": '<your-password>',
-    "InstanceId": '<list containing ec2-instance-id>'
+    "InstanceId": '<ec2-instance-id>'
 }
 ```
 
-- /api/fork/metrics - Route to call health reporter api to get metric data and store it into db. Accepts a GET request with json data in the given format:
+- ```/api/fork/metrics``` - Route to call health reporter api to get metric data and store it into db. Accepts a GET request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
@@ -67,14 +62,14 @@ and metric details about an AWS EC2 instance.
     "attributes": '<list containing names of metric>' // eg ["CPUUtilization", "NetworkIn"]
 }
 ```
-- /api/fork/metadata - Route to call health reporter api to get metric data and store it into db. Accepts a GET request with json data in the given format:
+- ```/api/fork/metadata``` - Route to call health reporter api to get metric data and store it into db. Accepts a GET request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
     "password": '<your-password>',
 }
 ```
-- /set/interval - Route to set interval after which the data from api shall be obtained. Accepts a POST request with json data in the given format:
+- ```/set/interval``` - Route to set interval after which the data from api shall be obtained. Accepts a POST request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
@@ -82,7 +77,7 @@ and metric details about an AWS EC2 instance.
     "interval": '<integer-value>'
 }
 ```
-- /set/threshold - Route to set threshold for metric values. Accepts a POST request with json data in the given format:
+- ```/set/threshold``` - Route to set threshold for metric values. Accepts a POST request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
@@ -90,7 +85,7 @@ and metric details about an AWS EC2 instance.
     "threshold": '<integer-value>'
 }
 ```
-- /check-threshold - Route to check if any metric value exceeds threshold. All such values are then mailed to the user. Accepts a POST request with json data in the given format:
+- ```/check-threshold``` - Route to check if any metric value exceeds threshold. All such values are then mailed to the user. Accepts a POST request with json data in the given format:
 ```javascript
 {
     "username": '<your-username>',
